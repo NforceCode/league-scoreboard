@@ -1,0 +1,32 @@
+CREATE TABLE scoreboard (
+	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    name varchar(256) not null,
+    player_id varchar(256) not null,
+    rating int(5) not null,
+    wins int (4) not null,
+    losses int (4) not null,
+    winrate int (3) not null
+);
+
+
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Сергей Пешков', '10dBC20', 45, 8, 14, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Кирилл Разумовский', '1dWC20', 18, 2, 4, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Артём Tim', '1dBC20', 34, 7, 8, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Eugeniy Ubi', '13dWC20', 33, 6, 6, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Light Knight', '11dWC20', 32, 6, 9, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Филипп', '68dWC20', 32, 4, 5, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Liza Aichi', '10dWC20', 31, 6, 6, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Parsifal', '3dWC20', 28, 5, 9, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Alexey Looka', '33dWC20', 26, 5, 6, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Alex Ponomarenko', '15dWC20', 24, 4, 8, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Даня Дягтеренко', '32dWC20', 23, 5, 11, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Dmitry Spirin', '16dWC20', 21, 2, 4, ROUND((wins/(wins+losses))*100.0, 0));
+INSERT INTO scoreboard (name,player_id,rating,wins,losses, winrate) VALUES ('Astral', '51dWC20', 12, 1, 2, ROUND((wins/(wins+losses))*100.0, 0));
+
+// подсчет винрейта
+SELECT wins, losses, 
+	ROUND((wins/(wins+losses))*100.0, 0) AS winrate
+FROM scoreboard;
+
+// обновлялка
+UPDATE scoreboadrs SET rating='', wins='', losses='', winrate=ROUND((wins/(wins+losses))*100.0, 0) WHERE player_id='###';

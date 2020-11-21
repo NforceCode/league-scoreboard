@@ -1,0 +1,161 @@
+body {
+    background-color: rgba(0,0,0, 0.9);
+    color: white;
+    font-size: 16px;
+}
+
+:root {
+    --grey: #333;
+}
+
+#pos1, #pos2, #pos3, #pos4, #pos5, #pos6, #pos7, #pos8 {
+    background-color: rgba(0, 255, 75, 0.15);
+}
+
+.beleren {
+    font-family: "Beleren Bold";
+}
+
+.belwe {
+    font-family: 'Belwe Bd BT [Rus by me]';
+}
+
+.bigSize {
+    font-size:large;
+}
+
+.smallSize {
+    font-size: small;
+}
+
+.topDogs {
+    background-color: darkgreen;
+}
+
+.select {
+    background-color: var(--grey);
+    color: white;
+}
+
+main {
+    width: 1000px;
+    display: block;
+    margin: auto;
+    padding: 0px;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+ td {
+    
+    padding: 5px;
+}
+
+.inserted td {
+    border: 0.5px double white;
+}
+
+
+th.playerData, td.playerData {
+    border: none;   
+    padding: 5px;
+}
+
+input {
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+button {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(90,90,90);
+}
+
+.centered {
+    text-align: center;
+}
+
+.centeredButtons {
+    display: block;
+    margin: auto;
+    padding: 2.5px;
+}
+
+.container {
+    width: 1000px;
+}
+
+hr {
+    width: 560px;
+}
+
+.short {
+    width: 75px;
+}
+
+#table {
+    background-image: url(../img/wall.png);
+}
+
+#logo {
+    width: 80px; 
+    padding: 3px;
+}
+
+.green { color: rgb(36, 179, 36);}
+.red { color: rgb(255, 50, 50);}
+
+.div-control {
+    margin-top: 50px;
+}
+
+.div-control form {
+    display: flex;
+    justify-content: center;
+}
+
+.div-control form input {
+    margin: 5px 10px;
+}
+
+input.table-input {
+    background: none;
+    border: none;
+}
+
+.advanced {
+    display: none;
+}
+
+.nav-ul {
+    padding-left: 0;
+}
+
+.nav-ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.nav-ul li a {
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    padding: 2px 5px;
+    background: #bbb;
+}
+
+.nav-ul li a:hover {
+    background: #ddd;
+
+}
